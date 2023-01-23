@@ -1,13 +1,17 @@
 package com.e4ekta.daggermvvmexplore.module
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity
 data class Product(
     @SerializedName("category")
     val category: String,
     @SerializedName("description")
     val description: String,
+    @PrimaryKey(autoGenerate = false)
     @SerializedName("id")
     val id: Int,
     @SerializedName("image")
